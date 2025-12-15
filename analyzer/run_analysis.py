@@ -1,6 +1,7 @@
-frfrom rag_baseline.baseline import run_rag
+from rag_baseline.baseline import run_rag
 from analyzer.grounding import analyze_grounding
 from analyzer.retrieval_quality import analyze_retrieval
+from analyzer.failure_classifier import classify_failure
 
 def analyze_prompt(prompt: str):
     rag_output = run_rag(prompt)
@@ -15,10 +16,14 @@ def analyze_prompt(prompt: str):
         retrieved_docs=rag_output["retrieved_docs"]
     )
 
+    failure_type = classify_failure(grounding, retrieval)
+
     return {
         "prompt": prompt,
         "analysis": {
             "grounding": grounding,
-            "retrieval_quality": retrieval
+            "retrieval_quality": retrieval,
+            "failure_type": failure_type
         }
     }
+
