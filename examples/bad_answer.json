@@ -1,0 +1,5 @@
+{
+  "prompt": "Explain what a deadlock is in operating systems",
+  "retrieved_docs": [],
+  "answer": "A deadlock happens when processes are stuck forever waiting for resources held by each other."
+}
