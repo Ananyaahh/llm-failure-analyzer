@@ -1,0 +1,7 @@
+{
+  "prompt": "Explain what a deadlock is in operating systems",
+  "retrieved_docs": [
+    "Deadlock is a situation in operating systems where a set of processes are blocked because each process holds a resource and waits for another resource held by another process."
+  ],
+  "answer": "A deadlock is a situation where processes are blocked because each process holds a resource and waits for another resource held by another process."
+}
